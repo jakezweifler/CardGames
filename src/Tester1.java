@@ -8,6 +8,5 @@ public class Tester1 {
 
         Deck d = new Deck();
         System.out.println(d);
-
     }
 }

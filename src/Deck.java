@@ -1,26 +1,27 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Deck {
 
-   Card[] deck;
+   List<Card> deck;
 
    public Deck() {
-       deck = new Card[52];
+       deck = new ArrayList<>();
        cardValue[] values = cardValue.values();
        cardSuit[] suits = cardSuit.values();
 
-       int x = 0;
        for(cardSuit s : suits) {
            for(cardValue v : values) {
-               deck[x] = new Card(v , s);
-               x++;
+               deck.add(new Card(v , s));
            }
        }
    }
 
    public String toString() {
-       return Arrays.toString(deck);
+       return Arrays.toString(deck.toArray());
    }
+
 
 
 }
