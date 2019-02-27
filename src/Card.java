@@ -1,11 +1,13 @@
 public class Card implements Comparable<Card>{
 
-    private cardSuite suite;
+    private cardSuit suit;
     private cardValue value;
+    private boolean inDeck;
 
-    public Card(cardValue v, cardSuite s) {
+    public Card(cardValue v, cardSuit s) {
         this.value = v;
-        this.suite = s;
+        this.suit = s;
+        inDeck = true;
     }
 
     @Override
@@ -14,6 +16,14 @@ public class Card implements Comparable<Card>{
     }
 
     public String toString() {
-        return value.getShorthand() + suite.getShorthand();
+        return "" + value.getShorthand() + suit.getShorthand();
+    }
+
+    public boolean getInDeck() {
+        return this.inDeck;
+    }
+
+    public void setInDeck(boolean b) {
+        this.inDeck = b;
     }
 }

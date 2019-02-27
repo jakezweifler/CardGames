@@ -1,4 +1,4 @@
-public enum cardSuite {
+public enum cardSuit {
 
     Spades ("S"),
     Hearts ("H"),
@@ -8,7 +8,7 @@ public enum cardSuite {
 
 
     private final String shorthand;
-    cardSuite(String shorthand) {
+    cardSuit(String shorthand) {
         this.shorthand = shorthand;
     }
 
