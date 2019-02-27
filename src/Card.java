@@ -26,4 +26,5 @@ public class Card implements Comparable<Card>{
     public void setInDeck(boolean b) {
         this.inDeck = b;
     }
+
 }
